@@ -4,7 +4,17 @@ import { Link } from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
+
 function Header() {
+  async function ping() {
+  try {
+    const user = await account.get();
+    console.log("Connected:", user);
+  } catch (error) {
+    console.log("Not logged in:", error);
+  }
+}
+
   const authStatus = useSelector((state) => state.auth.status)
   const navigate = useNavigate()
 
@@ -38,8 +48,9 @@ function Header() {
 
 
   return (
-    <header className='py-3 shadow bg-gray-500'>
+    <header className='w-full py-3 shadow bg-cyan-500'>
       <Container>
+        <button onClick={ping}>Send a ping</button>
         <nav className='flex'>
           <div className='mr-4'>
             <Link to='/'>

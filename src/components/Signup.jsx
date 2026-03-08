@@ -8,7 +8,7 @@ import {useForm} from 'react-hook-form'
 import { current } from '@reduxjs/toolkit'
 
 
-function Singup() {
+function Signup() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const {register, handleSubmit} = useForm()
@@ -88,4 +88,4 @@ function Singup() {
   )
 }
 
-export default Singup
+export default Signup

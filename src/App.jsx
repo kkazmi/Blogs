@@ -25,9 +25,11 @@ function App() {
     }, []) 
   
   console.log("API URL:", import.meta.env.VITE_APPWRITE_PROJECT_ID);
+  console.log("API URL:", import.meta.env.VITE_APPWRITE_URL);
+  console.log("API URL:", import.meta.env.VITE_APPWRITE_DATABASE_ID);
 
    return !loading ? (
-    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+    <div className='w-full min-h-screen flex flex-wrap content-between bg-gray-400'>
       <div className='w-full block'>
         <Header />
         <main>

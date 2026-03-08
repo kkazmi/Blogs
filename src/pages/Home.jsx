@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import appwriteService from "../appwrite/config";
 import {Container, PostCard} from '../components'
+import conf from '../conf/conf';
 
 function Home() {
+    
+//console.log("conf.appwriteUrl", conf.VITE_APPWRITE_URL);
     const [posts, setPosts] = useState([])
 
     useEffect(() => {

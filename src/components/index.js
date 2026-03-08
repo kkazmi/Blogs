@@ -12,6 +12,8 @@ import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
 import Input from "./Input";
 import Logo from "./Logo";
+import conf from "../conf/conf";
+
 export {
     Header,
     Footer,
